@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: javadockerbuildtutorial 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: javadockerbuildtutorial 
+    spec:
+      containers:
+        - name: javadockerbuildtutorial 
+          image: usharegistry.azurecr.io/javadockerbuildtutorial 
+          ports:
+          - containerPort: 8123
